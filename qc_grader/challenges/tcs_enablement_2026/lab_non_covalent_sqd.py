@@ -9,6 +9,8 @@
 # that they have been altered from the originals.
 
 
+from typing import TypedDict
+
 from typeguard import typechecked
 
 from qc_grader.grader.grade import grade_answer
@@ -17,14 +19,18 @@ _CHALLENGE = "tcs_enablement_2026"
 _LAB = "lab_non_covalent_sqd"
 
 
+System = TypedDict("System", {"casci_e": float})
+SweepPoint = TypedDict("SweepPoint", {"energy": float})
+
+
 def _grade(answer_dict, exercise: str) -> None:
     grade_answer(answer_dict, lab=_LAB, exercise=exercise, challenge=_CHALLENGE)
 
 
 @typechecked
 def grade_lab_non_covalent_sqd_ex1(
-    diy_systems: dict,
-    diy_sqd_sweep_results: dict,
+    diy_systems: dict[str, System],
+    diy_sqd_sweep_results: dict[str, list[SweepPoint]],
 ) -> None:
     """
     Grade Exercise 1: Ethanol and Methylamine SQD/IEF-PCM reproduction.
