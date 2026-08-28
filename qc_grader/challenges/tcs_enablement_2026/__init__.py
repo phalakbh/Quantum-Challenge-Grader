@@ -15,9 +15,9 @@ TCS Enablement Workshop 2026 - Grading Functions
 
 from qc_grader.grader.grade import create_check_progress_function
 from .lab_copqaoa import (
-	grade_lab_copqaoa_ex1,
-	grade_lab_copqaoa_ex2,
-	grade_lab_copqaoa_ex3,
+    grade_lab_copqaoa_ex1,
+    grade_lab_copqaoa_ex2,
+    grade_lab_copqaoa_ex3,
 )
 
 from .lab_implicit_solvent import grade_lab_implicit_solvent_ex1
@@ -27,13 +27,13 @@ _CHALLENGE = "tcs_enablement_2026"
 check_progress = create_check_progress_function(_CHALLENGE)
 
 __all__ = [
-	"check_progress",
-	# lab_copqaoa
-	"grade_lab_copqaoa_ex1",
-	"grade_lab_copqaoa_ex2",
-	"grade_lab_copqaoa_ex3",
-	# lab_implicit_solvent
-	"grade_lab_implicit_solvent_ex1",
-	# lab_non_covalent_sqd
-	"grade_lab_non_covalent_sqd_ex1",
+    "check_progress",
+    # lab_copqaoa
+    "grade_lab_copqaoa_ex1",
+    "grade_lab_copqaoa_ex2",
+    "grade_lab_copqaoa_ex3",
+    # lab_implicit_solvent
+    "grade_lab_implicit_solvent_ex1",
+    # lab_non_covalent_sqd
+    "grade_lab_non_covalent_sqd_ex1",
 ]
