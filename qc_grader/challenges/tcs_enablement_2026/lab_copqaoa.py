@@ -8,10 +8,6 @@
 # copyright notice, and modified files need to carry a notice indicating
 # that they have been altered from the originals.
 
-"""
-XYZ Enablement 2026 - cop-QAOA Knapsack - Grading Functions
-"""
-
 from typeguard import typechecked
 
 from qc_grader.grader.grade import grade_answer
